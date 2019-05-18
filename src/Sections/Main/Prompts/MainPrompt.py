@@ -10,6 +10,7 @@ class MainPrompt(BasePrompt):
                 { 'name': 'Generisi prost broj zeljene duzine', 'value': 1 },
                 { 'name': 'Inicijalizuj RSA sistem', 'value': 2 },
                 { 'name': 'Enkriptuj podatke', 'value': 3 },
-                { 'name': 'Prikazi pomoc', 'value': 4 }
+                { 'name': 'Prikazi pomoc', 'value': 4 },
+                { 'name': 'Napusti program', 'value': 5 }
             ]
         }))
