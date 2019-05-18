@@ -1,4 +1,5 @@
 from Sections.Main.Prompts.MainPrompt import MainPrompt
+from Sections.PrimeGenerator.PrimeGenerator import PrimeGenerator
 
 class Main():
     def __init__(self):
@@ -16,7 +17,7 @@ class Main():
 
     def startSection(self, id):
         if id == 1:
-            print('Section: Generate prime number')
+            PrimeGenerator().start()
 
             return True
         elif id == 2:
