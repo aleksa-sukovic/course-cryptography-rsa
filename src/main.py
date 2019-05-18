@@ -1,4 +1,7 @@
+from PyInquirer import prompt
+from Sections.Main.Main import Main
+
 def main():
-    print("Main function")
+    Main().start()
 
 if __name__ == '__main__': main()
