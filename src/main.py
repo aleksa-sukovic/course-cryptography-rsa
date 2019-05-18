@@ -1,4 +1,3 @@
-from PyInquirer import prompt
 from Sections.Main.Main import Main
 
 def main():
