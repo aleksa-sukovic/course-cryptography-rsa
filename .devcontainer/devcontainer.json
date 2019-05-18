@@ -1,0 +1,11 @@
+// See https://aka.ms/vscode-remote/devcontainer.json for format details.
+{
+	"name": "Python Development",
+	"dockerComposeFile": "../.docker/docker-compose.yml",
+	"service": "python-shell",
+	"workspaceFolder": "/usr/src/app",
+	"extensions": [
+		"ms-python.python",
+		"ow.vscode-subword-navigation"
+	]
+}

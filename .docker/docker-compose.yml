@@ -1,0 +1,9 @@
+version: '3'
+services:
+    python-shell:
+        build:
+            context: ..
+            dockerfile: .docker/Dockerfile
+        command: tail -F /bin/bash
+        volumes:
+            - ../src:/usr/src/app
