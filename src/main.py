@@ -1,6 +1,6 @@
-from Sections.Main.Main import Main
+from Sections.Main.MainSection import MainSection
 
 def main():
-    Main().start()
+    MainSection().start()
 
 if __name__ == '__main__': main()

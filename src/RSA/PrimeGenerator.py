@@ -1,7 +1,7 @@
 from random import randrange, getrandbits
 from math import floor, log
 
-class Generator():
+class PrimeGenerator():
     """
         Generates prime number with specified length in bits
     """

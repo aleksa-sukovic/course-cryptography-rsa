@@ -1,7 +1,8 @@
 from Sections.Main.Prompts.MainPrompt import MainPrompt
-from Sections.PrimeGenerator.PrimeGenerator import PrimeGenerator
+from Sections.PrimeGenerator.PrimeGeneratorSection import PrimeGeneratorSection
+from Sections.RSASetup.RSASetup import RSASetup
 
-class Main():
+class MainSection():
     def __init__(self):
         self.prompts = MainPrompt()
 
@@ -17,11 +18,11 @@ class Main():
 
     def startSection(self, id):
         if id == 1:
-            PrimeGenerator().start()
+            PrimeGeneratorSection().start()
 
             return True
         elif id == 2:
-            print('Section: Initialize RSA')
+            RSASetup().start()
 
             return True
         elif id == 3:
@@ -33,7 +34,11 @@ class Main():
 
             return True
         elif id == 5:
-            print('Exit program')
+            print('Show Help')
+
+            return True
+        elif id == 6:
+            print('Exit Program')
 
             return False
     

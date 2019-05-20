@@ -1,9 +1,9 @@
 from Sections.PrimeGenerator.Prompts.PrimeGeneratorPrompt import PrimeGeneratorPrompt
-from Sections.PrimeGenerator.Utilities.Generator import Generator
+from RSA.PrimeGenerator import PrimeGenerator
 
-class PrimeGenerator():
+class PrimeGeneratorSection():
     def start(self):
-        generator = Generator()
+        generator = PrimeGenerator()
         prompts = PrimeGeneratorPrompt()
         prompts.show()
 
