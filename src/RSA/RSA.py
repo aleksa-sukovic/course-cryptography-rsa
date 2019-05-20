@@ -1,12 +1,10 @@
 from RSA.PrimeGenerator import PrimeGenerator as Generator
-from RSA.Utils import Utils
 from random import randrange
 import math
 
 class RSA():
     def __init__(self):
         self.primeGenerator = Generator()
-        self.utils = Utils()
 
     def setup(self, length = 100):
         p = self.primeGenerator.yieldPrime(length)
