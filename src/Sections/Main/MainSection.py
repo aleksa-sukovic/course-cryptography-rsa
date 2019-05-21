@@ -1,6 +1,7 @@
 from Sections.Main.Prompts.MainPrompt import MainPrompt
 from Sections.PrimeGenerator.PrimeGeneratorSection import PrimeGeneratorSection
 from Sections.RSASetup.RSASetup import RSASetup
+from Sections.RSAEncrypt.RSAEncryptSection import RSAEncryptSection
 
 class MainSection():
     def __init__(self):
@@ -26,7 +27,7 @@ class MainSection():
 
             return True
         elif id == 3:
-            print('Section: Encrypt')
+            RSAEncryptSection().start()
 
             return True
         elif id == 4:

@@ -25,6 +25,12 @@ class RSA():
             "d": d
         }
     
+    def encrypt(self, n, e, data):
+        return pow(data, e, n)
+
+    def decrypt(self, d, n, data):
+        return pow(data, d, n)
+
     def chooseE(self, phi):
         e = randrange(2, phi)
         

@@ -8,6 +8,10 @@ class BasePrompt():
         print()
         self.answers = prompt(self.questions)
 
+    def showSingle(self, prompt):
+        print()
+        self.answers = prompt(prompt)
+
     def getAllAnswers(self):
         return self.answers
 
