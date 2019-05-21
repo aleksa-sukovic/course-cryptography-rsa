@@ -2,6 +2,7 @@ from Sections.Main.Prompts.MainPrompt import MainPrompt
 from Sections.PrimeGenerator.PrimeGeneratorSection import PrimeGeneratorSection
 from Sections.RSASetup.RSASetup import RSASetup
 from Sections.RSAEncrypt.RSAEncryptSection import RSAEncryptSection
+from Sections.RSADecrypt.RSADecryptSection import RSADecryptSection
 
 class MainSection():
     def __init__(self):
@@ -31,7 +32,7 @@ class MainSection():
 
             return True
         elif id == 4:
-            print('Section: Decrypt')
+            RSADecryptSection().start()
 
             return True
         elif id == 5:
@@ -42,7 +43,7 @@ class MainSection():
             print('Exit Program')
 
             return False
-    
+
     def showWelcomeScreen(self):
         print('- - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -', end = '')
         print('\n|                                                          |', end = '')
