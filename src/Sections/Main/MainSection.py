@@ -3,6 +3,7 @@ from Sections.PrimeGenerator.PrimeGeneratorSection import PrimeGeneratorSection
 from Sections.RSASetup.RSASetup import RSASetup
 from Sections.RSAEncrypt.RSAEncryptSection import RSAEncryptSection
 from Sections.RSADecrypt.RSADecryptSection import RSADecryptSection
+from Sections.Help.HelpSection import HelpSection
 
 class MainSection():
     def __init__(self):
@@ -36,7 +37,7 @@ class MainSection():
 
             return True
         elif id == 5:
-            print('Show Help')
+            HelpSection().start()
 
             return True
         elif id == 6:
