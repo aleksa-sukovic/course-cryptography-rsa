@@ -1,5 +1,6 @@
 from Prompts.BasePrompt import BasePrompt
 from Validators.NumberValidator import NumberValidator
+from Validators.WritePathValidator import WritePathValidator
 from PyInquirer import prompt
 from Validators.PathValidator import PathValidator
 
@@ -52,5 +53,6 @@ class RSAEncryptPrompt(BasePrompt):
         return prompt(({
             'type': 'input',
             'name': 'outputPath',
-            'message': 'Unesite putanju do fajla u koji zelite snimiti:'
+            'message': 'Unesite putanju do fajla u koji zelite snimiti:',
+            'validate': WritePathValidator
         }))
