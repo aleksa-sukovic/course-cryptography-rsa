@@ -20,17 +20,17 @@ class RSADecryptSection():
 
         # read from keyboard
         if self.source == 1:
-            self.content = self.prompts.showContentPrompt()['content']
+            self.content = self.prompts.showContentPrompt()
 
         # read from file
         if self.source == 2:
-            path = self.prompts.showInputPathPrompt()['inputPath']
+            path = self.prompts.showInputPathPrompt()
             with open(path) as fileContent:
                 self.content = fileContent.read()
 
         # get output file path
         if self.outputType == 1:
-            self.outputPath = self.prompts.showOutputPathPrompt()['outputPath']
+            self.outputPath = self.prompts.showOutputPathPrompt()
 
     def decrypt(self):
         # generate decrypted content
