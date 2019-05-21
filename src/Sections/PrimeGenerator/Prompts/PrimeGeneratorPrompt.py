@@ -14,3 +14,9 @@ class PrimeGeneratorPrompt(BasePrompt):
             'message': 'Koliko brojeva zelite generisati?',
             'validate': NumberValidator
         }))
+    
+    def hasRequiredAnswers(self, answers):
+        hasRequired = True
+        hasRequired = hasRequired and 'length' in answers
+        hasRequired = hasRequired and 'count' in answers
+        return hasRequired

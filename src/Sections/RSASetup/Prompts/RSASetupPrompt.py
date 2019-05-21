@@ -9,3 +9,8 @@ class RSASetupPrompt(BasePrompt):
             'message': 'Duzina broja (u bitima):',
             'validate': NumberValidator
         }))
+
+    def hasRequiredAnswers(self, answers):
+        hasRequired = True
+        hasRequired = hasRequired and 'length' in answers
+        return hasRequired

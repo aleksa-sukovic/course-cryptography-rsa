@@ -15,3 +15,8 @@ class MainPrompt(BasePrompt):
                 { 'name': '6) Napusti program', 'value': 6 }
             ]
         }))
+
+    def hasRequiredAnswers(self, answers):
+        hasRequired = True
+        hasRequired = hasRequired and 'section' in answers
+        return hasRequired

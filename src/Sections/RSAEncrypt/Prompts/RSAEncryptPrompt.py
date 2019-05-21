@@ -35,24 +35,38 @@ class RSAEncryptPrompt(BasePrompt):
         }))
 
     def showInputPathPrompt(self):
-        return prompt(({
+        answer = prompt(({
             'type': 'input',
             'name': 'inputPath',
             'message': 'Unesite putanju do datoteke iz koje zelite procitati sadrzaj:',
             'validate': PathValidator
         }))
 
+        return answer['inputPath'] if 'inputPath' in answer else quit()
+
     def showContentPrompt(self):
-        return prompt(({
+        answer = prompt(({
             'type': 'input',
             'name': 'content',
             'message': 'Unesite sadrzaj za enkripciju:'
         }))
 
+        return answer['content'] if 'content' in answer else quit()
+
     def showOutputPathPrompt(self):
-        return prompt(({
+        answer = prompt(({
             'type': 'input',
             'name': 'outputPath',
             'message': 'Unesite putanju do fajla u koji zelite snimiti:',
             'validate': WritePathValidator
         }))
+
+        return answer['outputPath'] if 'outputPath' in answer else quit()
+
+    def hasRequiredAnswers(self, answers):
+        hasRequired = True
+        hasRequired = hasRequired and 'n' in answers
+        hasRequired = hasRequired and 'e' in answers
+        hasRequired = hasRequired and 'outputType' in answers
+        hasRequired = hasRequired and 'source' in answers
+        return hasRequired
