@@ -3,6 +3,7 @@ from Validators.NumberValidator import NumberValidator
 from Validators.WritePathValidator import WritePathValidator
 from PyInquirer import prompt
 from Validators.PathValidator import PathValidator
+import sys
 
 class RSAEncryptPrompt(BasePrompt):
     def __init__(self):
@@ -42,7 +43,7 @@ class RSAEncryptPrompt(BasePrompt):
             'validate': PathValidator
         }))
 
-        return answer['inputPath'] if 'inputPath' in answer else quit()
+        return answer['inputPath'] if 'inputPath' in answer else sys.exit()
 
     def showContentPrompt(self):
         answer = prompt(({
@@ -51,7 +52,7 @@ class RSAEncryptPrompt(BasePrompt):
             'message': 'Unesite sadrzaj za enkripciju:'
         }))
 
-        return answer['content'] if 'content' in answer else quit()
+        return answer['content'] if 'content' in answer else sys.exit()
 
     def showOutputPathPrompt(self):
         answer = prompt(({
@@ -61,7 +62,7 @@ class RSAEncryptPrompt(BasePrompt):
             'validate': WritePathValidator
         }))
 
-        return answer['outputPath'] if 'outputPath' in answer else quit()
+        return answer['outputPath'] if 'outputPath' in answer else sys.exit()
 
     def hasRequiredAnswers(self, answers):
         hasRequired = True

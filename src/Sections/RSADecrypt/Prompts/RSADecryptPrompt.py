@@ -3,6 +3,7 @@ from Prompts.BasePrompt import BasePrompt
 from Validators.NumberValidator import NumberValidator
 from Validators.WritePathValidator import WritePathValidator
 from Validators.PathValidator import PathValidator
+import sys
 
 class RSADecryptPrompt(BasePrompt):
     def __init__(self):
@@ -42,7 +43,7 @@ class RSADecryptPrompt(BasePrompt):
             'validate': PathValidator
         }))
 
-        return answer['inputPath'] if 'inputPath' in answer else quit()
+        return answer['inputPath'] if 'inputPath' in answer else sys.exit()
 
     def showContentPrompt(self):
         answer = prompt(({
@@ -51,7 +52,7 @@ class RSADecryptPrompt(BasePrompt):
             'message': 'Unesite sadrzaj za enkripciju:'
         }))
 
-        return answer['path'] if 'path' in answer else quit()
+        return answer['path'] if 'path' in answer else sys.exit()
 
     def showOutputPathPrompt(self):
         answer = prompt(({
@@ -61,7 +62,7 @@ class RSADecryptPrompt(BasePrompt):
             'validate': WritePathValidator
         }))
 
-        return answer['outputPath'] if 'outputPath' in answer else quit()
+        return answer['outputPath'] if 'outputPath' in answer else sys.exit()
 
     def hasRequiredAnswers(self, answers):
         hasRequired = True
