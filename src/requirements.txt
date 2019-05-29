@@ -1,0 +1,2 @@
+PyInquirer==1.0.3
+pyinstaller==3.4

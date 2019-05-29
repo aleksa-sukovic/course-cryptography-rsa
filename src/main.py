@@ -1,4 +1,6 @@
+from Sections.Main.MainSection import MainSection
+
 def main():
-    print("Main function")
+    MainSection().start()
 
 if __name__ == '__main__': main()
