@@ -29,6 +29,21 @@ Idea was to enable user to set-up RSA system, encrypt and decrypt data. Accordin
     * User can load encrypted text from keyboard or from a file.
     * User can choose to print decrypted text to console and/or save it to a file.
 
+## How to set-up ?
+The following commands will build and run Docker image.
+
+Docker image is configure to run indefinitely, so you can execute interactive bash process against running container anytime to gain full control.
+
+1. `cd .docker`
+2. `docker-compose build`
+3. `docker-compose up`
+4. `docker exec -it $(docker ps -qf "name=python") bash`
+5. `python main.py`
+
+If you want to create executable, you can run (from inside of the container):
+
+`pyinstaller main.py --onefile`
+
 ## What have I learned ?
 1. RSA algorithm (principles behind it).
 2. Miller-Rabin primality test.
